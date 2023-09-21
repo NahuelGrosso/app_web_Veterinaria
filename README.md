@@ -3,7 +3,7 @@ Nombre y apellido: ***Melissa Tiseira Brizuela***
 email: melissa.tiseira@gmail.com
 
 Nombre y apellido: ***Leonardo Nahuel Grosso***
-email: melissa.tiseira@gmail.com
+email: nahuelgrosso1982@gmail.com
 
 **Temática:**
 Desarrollar una app web de base de datos para veterinarias.
