@@ -15,7 +15,6 @@ Nombre y apellido: ***Martin***
 Desarrollar una app web de base de datos para veterinarias.
 
 **Descripción Temática:**
-Crear desde cero, una aplicación web con bases de datos para veterinarias, que contega y proporcione información al profesional sobre el paciente (Animal), su historial clinico en ese lugar, y de su propietario.
-Tambien que genere una factura con la descripcion de lo que esta pagando y cuanto el cliente/propietario.
-
-
+Crear desde cero, una aplicación web con bases de datos para veterinarias, que contenga y proporcione información al profesional sobre el paciente (Animal), su historia clínica en ese lugar, y de su propietario.  
+También poder generar una factura con la descripción de lo que está pagando y monto el cliente/propietario.
+En una primera instancia, y por recomendación del profesor  ***Franco Stramana*** desarrollaremos la app con las tablas de cliente y paciente, con el correr y transcurso de la cursada intentaremos incluir la tercer tabla, que es sobre la consulta/historia clínica del animal, y por último agregar una cuarta tabla final para poder facturar tanto una venta que se desarrolle o por la consulta a la que arribó el cliente. 
