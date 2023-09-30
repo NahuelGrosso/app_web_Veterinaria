@@ -21,7 +21,8 @@ if(!empty($_GET['accion'])){
 // Eliminar Mascota      -> controladorMascota -> eliminarMascota();
 
 // Modificar Cliente     -> controladorCliente -> modificarCliente();
-// Modificar Mascota     -> ControladorMascota -> modificarMascota();
+// Modificar Mascota     -> controladorMascota -> modificarMascota();
+// Sobre la App          -> controladorSobre   -> ControladorSobreApp();
 
 
 //************************************************************ */
@@ -34,4 +35,36 @@ switch($parametros[]){
         $controladorCliente = new ControladorCliente();
         $controladorCliente->verClientes();
         break;
+    case 'mostrarMascota':
+        $controladorMascota = new ControladorMascota();
+        $controladorMascota->vermascotas();
+        break;
+    case 'agregarCliente':
+        $controladorCliente = new ControladorCliente();
+        $controladorCliente->agregarCliente();
+        break;
+    case 'agregarMascota':
+        $controladorMascota = new ControladorMascota();
+        $controladorMascota->agregarMascota();
+        break;
+    case 'eliminarCliente':
+        $controladorCliente = new ControladorCliente();
+        $controladorCliente->eliminarCliente();
+        break;
+    case 'eliminarMascota':
+        $controladorMascota = new ControladorMascota();
+        $controladorMascota->eliminarMascota();
+        break;
+
+    case 'modificarCliente':
+        $controladorCliente = new ControladorCliente();
+        $controladorCliente->modificarCliente();
+        break;
+    case 'modificarMascota':
+        $controladorMascota = new ControladorMascota();
+        $controladorMascota->modificarMascota();
+        break;
+    case 'sobreApp':
+        $controladorSobre = new ControladorSobreApp();
+        $controladorSobre->verSobreApp();
 }
