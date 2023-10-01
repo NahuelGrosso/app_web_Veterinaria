@@ -93,6 +93,7 @@ class VerClientes
 
             </div>
     <?php
+    require_once 'Templates/footer.php';
 
     }
 }
