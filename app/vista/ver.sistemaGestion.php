@@ -11,6 +11,7 @@ class VerClientes
 
         <div class="row"> <!-- Fila para buscar y mostrar clientes -->
 
+
             <div class="col"> <!-- columna busqueda y cleintes -->
 
                 <!-- me gustaria poder agregar un input de busqueda de clientes aqui -->
@@ -92,8 +93,10 @@ class VerClientes
                 </div>
 
             </div>
-    <?php
-    require_once 'Templates/footer.php';
 
+            <div class="row"> <!-- Aca quiero poner un carrusel con card de cada mascota-->
+            </div>
+    <?php
+        require_once 'Templates/footer.php';
     }
 }
