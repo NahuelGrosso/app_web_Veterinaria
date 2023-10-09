@@ -9,7 +9,7 @@ email: nahuelgrosso1982@gmail.com
 N°: ***163***
 
 ### __Tutor:__
-Nombre y apellido: ***Martin***
+Nombre y apellido: ***Martín Alejo Massimo***
 
 **Temática:**
 Desarrollar una app web de base de datos para veterinarias.
