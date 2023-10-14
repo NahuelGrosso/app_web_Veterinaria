@@ -1,3 +1,7 @@
 body{
-    background-color: blueviolet;
+    background-color: aliceblue;
+}
+#btn-cargarCliente{
+    margin: 5px;
+    padding: 5px;
 }

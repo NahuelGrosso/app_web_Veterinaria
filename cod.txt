@@ -1,0 +1,7 @@
+   codigo para...
+   actualizar/modificar
+    public function ActualizarTarea($id, $titulo, $descripcion, $prioridad){
+        $sentencia =  $this->db->prepare("UPDATE tarea SET titulo=?, descripcion=?, prioridad=? WHERE id=?");
+        $sentencia->execute(array($titulo, $descripcion, $prioridad, $id));
+    }
+
