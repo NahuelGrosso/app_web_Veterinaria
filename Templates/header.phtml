@@ -31,15 +31,7 @@
                             <a class="nav-link" aria-current="page" href="sobreApp">Sobre el sistema</a>
                         </li>
 
-                        <?php if (!isset($_SESSION['USUARIO_NOMBRE'])) : ?>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="acceso">Login</a>
-                            </li>
-                        <?php else : ?>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="salir">Logout (<?= $_SESSION['USUARIO_CONTRASEÑA'] ?>)</a>
-                            </li>
-                        <?php endif ?>
+                       
 
                     </ul>
                 </div>

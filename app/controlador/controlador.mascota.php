@@ -4,7 +4,7 @@ require_once 'app/vista/ver.mascota.php';
 
 //require_once 'app/ayudantes/ayudantes.autenticacion.php';
 
-class ControladorCliente
+class ControladorMascota
 {
 
     private $modeloMascota;

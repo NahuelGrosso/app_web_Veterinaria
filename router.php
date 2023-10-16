@@ -85,6 +85,8 @@ switch ($parametros[0]) { // revisar si va cero
     case 'salir':
         $controladorAutenticacion = new ControladorAutenticacion();
         $controladorAutenticacion = salir();*/
+
+        
     default:
         // Este ejemplo ilustra el caso especial "HTTP/"
         // Alternativas mejores en cases de uso típicos incluyen:
