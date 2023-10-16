@@ -1,7 +1,7 @@
 body{
     background-color: aliceblue;
 }
-#btn-cargarCliente{
+.margenBoton{
     margin: 5px;
     padding: 5px;
 }

@@ -1,9 +1,9 @@
 <div class="container text-center">
-    <h1>Formularios de Alta</h1>
+    <h1>Formularios de Alta Clientes</h1>
     <div class="row align-items-start">
         <div class="col">
             <h2>Formulario Clientes</h2>
-            <form action="agregarCliente" method="$_POST">
+            <form action="agregarCliente" method="POST">
 
                 <!-- formulario Bootstrap -->
                 <div class="mb-3">
@@ -44,7 +44,7 @@
                     <option value="Loberia">Loberia</option>
                 </datalist>
 
-                <button id="btn-cargarCliente" type="submit" class="btn btn-primary">Cargar Cliente</button>
+                <button id="btn-cargarCliente" type="submit" class="btn btn-primary margenBoton">Cargar Cliente</button>
 
                 <!-- Fin formulario Bootstrap -->
 
@@ -52,38 +52,6 @@
 
         </div>
 
-        <div class="col">
-            <h2>Formulario Mascotas</h2>
-            <form action="agregarMascota" method="$_POST">
-
-                <!-- formulario Bootstrap -->
-                <div class="mb-3">
-                    <label class="form-label">D.N.I. Cliente</label>
-                    <input required type="number" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Nombre</label>
-                    <input required type="text" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Tipo</label>
-                    <input required type="text" class="form-control" placeholder="Perro/Gato...">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Raza</label>
-                    <input required type="text" class="form-control" placeholder="Callejero...">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Edad</label>
-                    <input required type="number" class="form-control">
-                </div>
-
-                <button type="submit" class="btn btn-primary">Cargar Mascota</button>
-
-                <!-- Fin formulario Bootstrap -->
-
-            </form>
-
-        </div>
+       
     </div>
 </div>

@@ -5,3 +5,29 @@
         $sentencia->execute(array($titulo, $descripcion, $prioridad, $id));
     }
 
+ <div class="btn-group dropend">
+                                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Editar Cliente</button>
+                                                <div class="card" style="width: 18rem;">
+                                                    <div class="card-header" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        Modificar Cliente
+                                                    </div>
+                                                    <ul class="list-group list-group-flush">
+                                                        <form action="modificarCliente" method="POST">
+                                                            <li class="list-group-item">Apellido</li>
+                                                            <input required name="apellido" type="text" class="form-control" placeholder="<?php echo $cliente->Apellido; ?>">
+                                                            <li class="list-group-item">Nombre</li>
+                                                            <input required name="nombre" type="text" class="form-control" placeholder="<?php echo $cliente->Nombre; ?>">
+                                                            <li class="list-group-item">Telefono</li>
+                                                            <input required name="telefono" type="number" class="form-control" placeholder="<?php echo $cliente->Telefono; ?>">
+                                                            <li class="list-group-item">Email</li>
+                                                            <input name="email" type="email" class="form-control" placeholder="<?php echo $cliente->Email; ?>">
+                                                            <li class="list-group-item">Direccion</li>
+                                                            <input required name="direccion" type="text" class="form-control" placeholder="<?php echo $cliente->Direccion; ?>">
+                                                            <li class="list-group-item">Ciudad</li>
+                                                            <input required name="ciudad" type="text" class="form-control" placeholder="<?php echo $cliente->Ciudad; ?>">
+
+                                                            <button id="btn-cargarCliente" type="submit" class="btn btn-primary margenBoton">Modificar Cliente</button>
+                                                        </form>
+                                                    </ul>
+                                                </div>
+                                            </div>

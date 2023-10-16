@@ -2,11 +2,12 @@
 
 require_once './app/controlador/controlador.cliente.php';
 //require_once './app/controlador/controlador.mascota.php';
+//require_once 'app/ayudantes/ayudantes.autenticacion.php';
 
 define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
 
 $accion = 'verClientes'; // => Accion que tenemos por defecto
-if(!empty($_GET['accion'])){
+if (!empty($_GET['accion'])) {
     $accion = $_GET['accion'];
 }
 
@@ -30,7 +31,7 @@ if(!empty($_GET['accion'])){
 //************************************************************ */
 $parametros = explode('/', $accion);
 
-switch($parametros[0]){// revisar si va cero
+switch ($parametros[0]) { // revisar si va cero
     case 'verClientes':
         $controlador = new ControladorCliente();
         $controlador->verClientes();
@@ -39,16 +40,20 @@ switch($parametros[0]){// revisar si va cero
         $controlador = new ControladorCliente();
         $controlador->agregarCliente();
         break;
-    case 'eliminarCliente'://Eliminar por id
+    case 'eliminarCliente': //Eliminar por id
         $controlador = new ControladorCliente();
-        $id = $parametros[1];
-        $controlador->eliminarCliente($dni);
+        // $id = $parametros[1];
+        $controlador->eliminarCliente($parametros[1]);
         break;
-   /*case 'modificarCliente':
-        $controladorCliente = new ControladorCliente();
-        $controladorCliente->modificarCliente();
-        break;*/
-/*
+    case 'modificarCliente':
+        $controlador = new ControladorCliente();
+        // $id = $parametros[1];
+        $controlador->modificarCliente($parametros[1]);
+        break;
+    case 'mostrarCliente':
+        $controlador = new ControladorCliente();
+        $controlador->mostrarCliente($parametros[1]);
+        /*
     case 'mostrarMascota':
         $controladorMascota = new ControladorMascota();
         $controladorMascota->vermascotas();
@@ -66,19 +71,27 @@ switch($parametros[0]){// revisar si va cero
         $controladorMascota->modificarMascota();
         break;
         */
-    /*case 'sobreApp':
+        /*case 'sobreApp':
         $controladorSobre = new ControladorSobreApp();
         $controladorSobre->verSobreApp();
         */
+        /* 
+    case 'acceso':
+        $controladorAutenticacion = new ControladorAutenticacion();
+        $controladorAutenticacion->verAcceso();
+    case 'autenticacion':
+        $controladorAutenticacion = new ControladorAutenticacion();
+        $controladorAutenticacion->autenticacion();
+    case 'salir':
+        $controladorAutenticacion = new ControladorAutenticacion();
+        $controladorAutenticacion = salir();*/
     default:
-    
-    // Este ejemplo ilustra el caso especial "HTTP/"
-    // Alternativas mejores en cases de uso típicos incluyen:
-    // 1. header($_SERVER["SERVER_PROTOCOL"] . " 404 Not Found");
-    //    (para sobreescribir el mensaje de estado HTTP para los clientes que todavía usan HTTP/1.0)
-    // 2. http_response_code(404); (para usar el mensaje defecto)
-    header("HTTP/1.0 404 Not Found");
-    echo('404 Page not foound');
-    break;
-
+        // Este ejemplo ilustra el caso especial "HTTP/"
+        // Alternativas mejores en cases de uso típicos incluyen:
+        // 1. header($_SERVER["SERVER_PROTOCOL"] . " 404 Not Found");
+        //    (para sobreescribir el mensaje de estado HTTP para los clientes que todavía usan HTTP/1.0)
+        // 2. http_response_code(404); (para usar el mensaje defecto)
+        header("HTTP/1.0 404 Not Found");
+        echo ('404 Page not foound');
+        break;
 }
