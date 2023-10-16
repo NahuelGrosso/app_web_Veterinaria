@@ -2,6 +2,8 @@
 
 require_once 'app/modelo/modelo.cliente.php';
 require_once 'app/vista/ver.clientes.php';
+require_once 'app/modelo/modelo.mascota.php';
+require_once 'app/vista/ver.mascota.php';
 
 //require_once 'app/ayudantes/ayudantes.autenticacion.php';
 
@@ -10,6 +12,8 @@ class ControladorCliente
 
     private $modelo;
     private $vista;
+    private $modeloMascota;
+    private $vistaMascota;
 
     function __construct()
     {
@@ -18,6 +22,8 @@ class ControladorCliente
 
         $this->modelo = new ModeloCliente();
         $this->vista = new VerClientes();
+        $this->modeloMascota = new ModeloMascota();
+        $this->vistaMascota = new VerMascotas();
     }
     /* Nos muestra una lista de los clientes */
     function verClientes()
@@ -29,7 +35,7 @@ class ControladorCliente
         // Vista
         $this->vista->mostrarClientes($clientes);
     }
-
+   
     function agregarCliente()
     {
         //recibo los datos del formulario        

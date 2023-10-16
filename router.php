@@ -53,12 +53,12 @@ switch ($parametros[0]) { // revisar si va cero
     case 'mostrarCliente':
         $controlador = new ControladorCliente();
         $controlador->mostrarCliente($parametros[1]);
-        /*
+    
     case 'mostrarMascota':
         $controladorMascota = new ControladorMascota();
         $controladorMascota->vermascotas();
         break;   
-    case 'agregarMascota':
+    /*case 'agregarMascota':
         $controladorMascota = new ControladorMascota();
         $controladorMascota->agregarMascota();
         break;    
