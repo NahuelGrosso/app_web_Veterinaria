@@ -1,6 +1,4 @@
 ### __Integrantes:__
-Nombre y apellido: ***Melissa Tiseira Brizuela***
-email: melissa.tiseira@gmail.com
 
 Nombre y apellido: ***Leonardo Nahuel Grosso***
 email: nahuelgrosso1982@gmail.com
