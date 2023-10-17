@@ -1,7 +1,8 @@
 <?php
 
 require_once './app/controlador/controlador.cliente.php';
-//require_once './app/controlador/controlador.mascota.php';
+require_once './app/controlador/controlador.autenticacion.php';
+require_once './app/controlador/controlador.mascota.php';
 //require_once 'app/ayudantes/ayudantes.autenticacion.php';
 
 define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
@@ -53,12 +54,18 @@ switch ($parametros[0]) { // revisar si va cero
     case 'mostrarCliente':
         $controlador = new ControladorCliente();
         $controlador->mostrarCliente($parametros[1]);
-    
+
     case 'mostrarMascota':
-        $controladorMascota = new ControladorMascota();
-        $controladorMascota->vermascotas();
-        break;   
-    /*case 'agregarMascota':
+        $controlador = new ControladorMascota();
+        $controlador->vermascotas();
+        break;
+    case 'login';
+        $controloer = new ControladorAutenticacion();
+        $controlador->verLogin();
+        break;
+
+
+        /*case 'agregarMascota':
         $controladorMascota = new ControladorMascota();
         $controladorMascota->agregarMascota();
         break;    
@@ -86,7 +93,7 @@ switch ($parametros[0]) { // revisar si va cero
         $controladorAutenticacion = new ControladorAutenticacion();
         $controladorAutenticacion = salir();*/
 
-        
+
     default:
         // Este ejemplo ilustra el caso especial "HTTP/"
         // Alternativas mejores en cases de uso típicos incluyen:
